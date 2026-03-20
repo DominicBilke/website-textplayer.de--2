@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TextPlayer.de – Play any text at any time</title>
+  <meta name="description" content="Set text, choose a time and language. The service speaks your text at the scheduled time. Perfect for prayers, reminders, and announcements.">
+  <meta name="author" content="Bilke Web- und Softwareentwicklung">
+  <link rel="icon" href="images/fevicon.png" type="image/gif">
+  <link rel="stylesheet" href="css/modern.css">
+</head>
+<body class="app-layout">
+  <header class="app-header">
+    <div class="app-header-inner">
+      <a href="index.html" class="app-logo">TextPlayer.de</a>
+      <button class="nav-toggle" type="button" aria-label="Toggle menu" onclick="document.querySelector('.app-nav').classList.toggle('open')">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+      <nav class="app-nav">
+        <a href="index.html" class="active">About</a>
+        <a href="settext.php">Set Text</a>
+        <a href="playtext.php">Play Text</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="app-main">
+    <div class="app-container">
+      <section class="hero hero-with-bg">
+        <h1 class="hero-title">Play any text you want<br>at any time</h1>
+        <p class="hero-subtitle">Enter your text, set the time and language. The browser will speak it at the scheduled moment. Multiple texts at different times are possible.</p>
+      </section>
+
+      <section class="feature-grid">
+        <div class="feature-block">
+          <div class="feature-icon">📝</div>
+          <h3 class="feature-title">Set Text</h3>
+          <p class="feature-desc">Enter the text, choose time, language and voice. Click "Set Text" to save. Add as many scheduled texts as you need.</p>
+          <a href="settext.php" class="btn btn-primary">Set Text</a>
+        </div>
+        <div class="feature-block">
+          <div class="feature-icon">▶</div>
+          <h3 class="feature-title">Play Text</h3>
+          <p class="feature-desc">Keep the page open and your text will be spoken automatically at the scheduled time. You can also play any text manually.</p>
+          <a href="playtext.php" class="btn btn-primary">Play Text</a>
+        </div>
+      </section>
+
+      <section class="card" style="margin-top: var(--space-2xl);">
+        <h2 class="card-title">What users say</h2>
+        <p style="color: var(--color-text-muted); margin: 0;">"It is a great tool! You can independently set a text and play it. You needn't be present."</p>
+        <p style="margin-top: var(--space-md); font-weight: 500;">— Jone Due</p>
+      </section>
+    </div>
+  </main>
+
+  <footer class="app-footer">
+    <div class="app-footer-inner">
+      <div class="app-footer-links">
+        <a href="imprint.html">Imprint</a>
+        <a href="privacy_policy.html">Privacy Policy</a>
+      </div>
+      <p class="app-footer-copy">© 2024 <a href="https://www.bilke-web-sw.de/" target="_blank" rel="noopener">Bilke Web and Software Development</a></p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,25 @@
+ypu55fZrHscwoNmXqXuQ
+
+$pdo = new PDO('mysql:host=localhost;dbname=d03d4320', 'd03d4320', 'ypu55fZrHscwoNmXqXuQ');
+
+if(isset($_GET['user'])) {
+$sql = "SELECT * FROM textplayer WHERE user='".$_GET['user']."'";
+foreach ($pdo->query($sql) as $row) {
+	$playing_time = array_explode_with_keys($row['playing_time']);
+}
+}
+
+$sql = "UPDATE textplayer SET user=".$user.", text='".$session."', language='".$lang."', voice='".$voice."', name='".$name."' WHERE user='".$_GET['user']."'";
+
+// Prepare statement
+$stmt = $pdo->prepare($sql);
+
+// execute the query
+$stmt->execute();
+
+
+$statement = $pdo->prepare("INSERT INTO textplayer (user, text, language, voice, name)  VALUES (?, ?, ?, ?, ?)");
+
+$statement->execute(array($user, $session, $lang, $voice, $name));
+
+example ID: 648335cae849b   
